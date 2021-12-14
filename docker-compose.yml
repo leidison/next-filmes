@@ -1,0 +1,9 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    entrypoint: ["node_modules/.bin/next", "dev"]
